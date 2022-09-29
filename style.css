@@ -1,0 +1,122 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --green-ligth: #3bd9be;
+    --green-dark: #0da98c;
+    --brown: #5c4545;
+    --white: #ffffff;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Poppins';
+}
+
+ /* pattern */
+
+.pattern {
+max-height: 10%;
+max-width: 33%;
+position: relative; left: 80px; bottom: 250px;
+opacity: 0.5;
+transform: rotate(90deg);
+
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo #image {
+    width: 25%;
+    margin-bottom: 3rem;
+    border-radius: 5rem;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    color: var(--brown);
+}
+
+.menu-section .list {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    background-color: var(--green-ligth);
+    padding: 1rem;
+    margin: 5rem 0 3rem 0;
+}
+
+
+/* ventajas de la terapie en linea */
+
+.description {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.listas li {
+    font-size: 1.3rem;
+    list-style: none;
+    align-items: center;
+}
+
+
+.section-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--brown);
+    padding: 2.5rem;
+    margin-top: 4rem;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.section-footer .redes {
+    color: var(--white);
+}
+
+.icons {
+    display: flex;
+    font-size: 2rem;
+    justify-content: space-evenly;
+    color: var(--white);
+    width: 25%;
+}
+
+
+.copyright {
+    color: var(--white);
+}
+
+.final-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+
+.final-footer #logo {
+    width: 20%;
+}
+
