@@ -1,16 +1,14 @@
-// 1er ENTREGA: algoritmo condicional, algoritmo de ciclo Y simulador interactivo
+// 1er ENTREGA: algoritmo condicional, algoritmo de ciclo, simulador interactivo
 
 /* Reserva de servicios psicológicos: */
 
 let mensajeConfirm;
 
 const bienvenida = () => {
-
     alert("Hola, mi nombre es Vevis Villalobos y soy Psicóloga");
     mensajeConfirm = confirm("¿Te interesa conocer cuáles son los servicios que brindo?");
 }
 bienvenida();
-
 
 const confirmacionReserva = () => {
     let confirmacion = confirm("¿Desea proceder con la reserva?");
@@ -27,24 +25,27 @@ const mostrarServicios = () => {
     if (mensajeConfirm){
 
             const servicios = ['Terapia para adultos', 'Terapia de parejas', 'Terapia para adolescentes', 'Terapia para niños'];
-
             alert("Estos son los servicios que podrás encontrar aquí: ")
             
             for(let i = 0; i < servicios.length; i++){
                 alert(servicios[i])
             }
-        
+
             let respuestaUsuario = parseInt(prompt(`Ingrese el numero que coincida con el servicio que desea adquirir: 
                                         \n 0: ${servicios[0]}
                                         \n 1: ${servicios[1]}
                                         \n 2: ${servicios[2]}
                                         \n 3: ${servicios[3]}`));
             
+            if(respuestaUsuario === '' || respuestaUsuario === null){
+                alert("Error. Debes ingresar una respuesta")
+            } if(respuestaUsuario >= 4){
+                alert("Servicio no válido. Inténtalo de nuevo.")
+                return;
+            }
             
             alert(`Has seleccionado el servicio número ${respuestaUsuario}`); 
-
             confirmacionReserva();
-
     } else {
         function despedida () {
         alert("Ha sido un placer. Nos vemos en otra oportunidad. Adiós.")
