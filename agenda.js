@@ -1,6 +1,6 @@
 /* reservas */
 
-let carrito = document.querySelector('.carrito-form');
+let carritoForm = document.querySelector('.carrito-form');
 let form = document.querySelector('form');
 let agendarCita = document.querySelector('.agendarCita'); 
 let buttonReserva = document.querySelector('button');
@@ -10,6 +10,7 @@ let errores = []
 
 //se procede a la validacion del formulario al activarse el evento
 buttonReserva.addEventListener('submit', validarFormulario);
+
     function validarFormulario(e) {
         e.preventDefault();
 

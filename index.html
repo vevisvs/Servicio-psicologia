@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./style.css">
     <!--<script defer src="./miarchivo.js"></script>-->
     <script defer src="./carrito.js"></script>
+    <script defer src="./servicios.js"></script>
+    <script defer src="./agenda.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -30,7 +32,12 @@
                 <li class="pagarReserva">Pagar mi reserva</li>
             </ul>
         </section>
-        <section class="container-servicios">
+        <section class="container-inicio">
+
+
+        <div id="servicios-section">
+
+        </div>
 
 
         <article class="description">
@@ -73,7 +80,7 @@
                     </select>
 
                     <label for="agenda">Servicio a agendar</label>
-                    <select name="agenda" id="agenda">
+                    <select name="agenda" id="agenda" onchange="capturarServicioElegido();">
                         <option></option>
                         <option>Terapia para adulto</option>
                         <option>Terapia de pareja</option>
