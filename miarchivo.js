@@ -1,5 +1,4 @@
 // 1er ENTREGA: algoritmo condicional, algoritmo de ciclo, simulador interactivo
-
 /* Reserva de servicios psicológicos: */
 
 let mensajeConfirm;
@@ -58,52 +57,7 @@ mostrarServicios();
 
 
 
-/* 2da ENTREGA: Incluir métodos de arrays */
-/* array de objetos: Visualizar nombre servicio + precio de c/u */
-let listarPrecios = () => {
 
-    const listado = [
-        { idServicio: 0, nombre: 'Terapia para adultos', precio: 1500 },
-        { idServicio: 1, nombre: 'Terapia para parejas', precio: 2500 },
-        { idServicio: 2, nombre: 'Terapia para adolescentes', precio: 1800 },
-        { idServicio: 3, nombre: 'Terapia para niños', precio: 2000 }
-    ];
-    const visualizarLista = listado.map((elemento => {
-        elemento.nombre + elemento.precio
-    }))
-}
-listarPrecios();
-
-
-/* cargar carrito */
-//a corregir!
-let carritoCompra = [];
-let cantidadDeServicios = 4;
-
-let cargarCarrito = () => {
-    let entrada = prompt("Ingrese en su carrito de compras el servicio a adquirir: ") //pendiente por validar si existe y agregarlo
-    carritoCompra.push(entrada.toLowerCase().trim());  //metodos de array
-
-    confirm("¿Deseas seguir agregando servicios a tu carrito de compras?");
-
-    if(confirm){
-        do{
-            let entrada = prompt("Ingrese en su carrito de compras el/los servicio/s a adquirir: ")
-            carritoCompra.push(entrada.toLowerCase().trim());  
-        } while( cantidadDeServicios < 5 )
-    } 
-    alert("Carrito cerrado")
-
-    alert("Su carrito de compras contiene: " + carritoCompra.join(" | "))
-}
-cargarCarrito();
-
-
-
-/*  modificar carrito de compras */
-let eliminarProducto = () => {
-
-}
 
 
 
