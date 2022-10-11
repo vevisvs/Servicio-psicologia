@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psic. Vevis Villalobos</title>
     <link rel="stylesheet" href="./style.css">
-    <script defer src="./miarchivo.js"></script>
+    <!--<script defer src="./miarchivo.js"></script>-->
+    <script defer src="./carrito.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -24,9 +25,9 @@
         <section class="menu-section">
             <ul class="list">
                 <li>Servicios</li>
-                <li>Agenda disponible</li>
-                <li>Contáctame</li>
-                <li>Pagar reserva</li>
+                <li class="agendarCita">Agendar una cita</li>
+                <li>Contácto</li>
+                <li class="pagarReserva">Pagar mi reserva</li>
             </ul>
         </section>
         <section class="container-servicios">
@@ -46,6 +47,47 @@
                     <li>Misma eficacia que la terapia presencial</li>
                 </ul>
             </div>
+
+            
+                <form id="formulario" method="post" >
+                <table>
+                    <tr>
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" placeholder="Nombre completo">
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Email" >
+                    
+                    <label for="paisorigen">País de residencia</label>
+                    <select name="paisorigen" id="paisorigen">
+                        <option></option>
+                        <option>Argentina</option>
+                        <option>Brasil</option>
+                        <option>Chile</option>
+                        <option>Colombia</option>
+                        <option>Ecuador</option>
+                        <option>Paraguay</option>
+                        <option>Perú</option>
+                        <option>Uruguay</option>
+                        <option>Venezuela</option>
+                    </select>
+
+                    <label for="agenda">Servicio a agendar</label>
+                    <select name="agenda" id="agenda">
+                        <option></option>
+                        <option>Terapia para adulto</option>
+                        <option>Terapia de pareja</option>
+                        <option>Terapia para adolescente</option>
+                        <option>Terapia infantil</option>
+                    </select>
+                    
+                    <label for="fecha">Fecha de consulta</label>
+                    <input type="date" name="fecha" required>
+                    
+                    <button>Reservar turno</button>
+                    </tr>
+                </table>    
+                </form>
     
         </article>
     </div>
