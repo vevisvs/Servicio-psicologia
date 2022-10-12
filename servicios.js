@@ -1,9 +1,5 @@
 /* creacion de la clase Servicio con su constructor */
 class Servicio {
-    id;
-    imagen = [];
-    nombre;
-    precio;
     constructor(id, imagen, nombre, precio){
         this.id = id;
         this.imagen = imagen;
@@ -16,38 +12,32 @@ class Servicio {
 const servicios = []
 
 
-/* agregar los objetos servicios al array */
-function agregarServicios() {
-    let terapiaAdultos = new Servicio (0, '.root/svg/terapia-adultos.jpg','Terapia para adultos', 1500);
-    let terapiaParejas = new Servicio (1, '.root/svg/terapia-parejas.jpg', 'Terapia de parejas', 2500);
-    let terapiaAdolescentes = new Servicio (2, '.root/svg/terapia-adolescentes.jpg', 'Terapia para adolescentes', 1800);
-    let terapiaNinos = new Servicio (3, '.root/svg/terapia-ninos.png', 'Terapia para niños', 2000);
+/* crear los objetos servicios y cargarlos al array */
+function generarServicios() {
+    let terapiaAdultos = new Servicio (0, 'root/img/terapia-adultos.jpg','Terapia para adultos', 1500);
+    let terapiaParejas = new Servicio (1, 'root/img/terapia-parejas.jpg', 'Terapia de parejas', 2500);
+    let terapiaAdolescentes = new Servicio (2, 'root/img/terapia-adolescentes.jpg', 'Terapia para adolescentes', 1800);
+    let terapiaNinos = new Servicio (3, 'root/img/terapia-ninos.png', 'Terapia para niños', 2000);
     
     servicios.push(terapiaAdultos, terapiaParejas, terapiaAdolescentes, terapiaNinos);
 }
-agregarServicios();
-
-
-/* agregar propiedad de imagen al array de objetos*/
-// servicios[0].imagen = '../svg/terapia-adultos.jpg'
-// servicios[1].imagen = '../svg/terapia-parejas.jpg'
-// servicios[2].imagen = '../svg/terapia-adolescentes.jpg'
-// servicios[3].imagen = '../svg/terapia-ninos.png'
-
+generarServicios();
 
 
 /* eliminar servicio del array */
-const eliminarServicio = () => {
-    let eliminado = prompt("¿Cual servicio desea eliminar?")
-        
-    if(servicios.includes(eliminado)){
-        let indice = servicios.indexOf(eliminado);
-        servicios.splice(indice, 1)
-    } else {
-        alert("El producto ingresado no se encuentra en tu carrito de compras. Intentalo de nuevo.")
-    }
+let eliminar = prompt("Ingrese el id del servicio a eliminar")
+if(eliminar > 3){
+    alert("Ingrese un id de servicio válido")
+} else {
+    servicios.forEach((item, index, servicios) => {
+        if(item.id == eliminar){ 
+            servicios.splice(index, 1 )
+        }      
+    } 
+)
 }
-eliminarServicio(); 
+console.log(servicios);
+
 
 
 /* mostrar card de servicios dinamicamente */
@@ -56,11 +46,11 @@ let mostrarCardsServicios = () => {
 
     let fragmento = document.createElement('div');
 
-    for(serv in servicios){
+    for(let s in servicios){
         fragmento.innerHTML += `<div class="card">
-                                    <img src="${serv.imagen}">
-                                    <h2>${serv.nombre}</h2>
-                                    <span>${serv.precio}</span>
+                                    <img src="${s.imagen}">
+                                    <h2>${s.nombre}</h2>
+                                    <span>${s.precio}</span>
                                     <button>Añadir a carrito</button>
                                 </div>`
     }
