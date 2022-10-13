@@ -41,16 +41,17 @@ console.log(servicios);
 
 
 /* mostrar card de servicios dinamicamente */
-let mostrarCardsServicios = () => {
+const mostrarCardsServicios = () => {
     let cardsServicios = document.querySelector('#servicios-section');
 
     let fragmento = document.createElement('div');
+    fragmento.classList.add('cards-section');
 
-    for(let s in servicios){
+    for(const servicio of servicios){
         fragmento.innerHTML += `<div class="card">
-                                    <img src="${s.imagen}">
-                                    <h2>${s.nombre}</h2>
-                                    <span>${s.precio}</span>
+                                    <img src="${servicio.imagen}">
+                                    <h2>${servicio.nombre}</h2>
+                                    <p>${servicio.precio} $</p>
                                     <button>Añadir a carrito</button>
                                 </div>`
     }
