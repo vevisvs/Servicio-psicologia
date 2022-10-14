@@ -123,7 +123,6 @@ blockquote p cite {
 }
 
 /* icons - listas*/
-
 #icons {
     font-size: 40px;
     width: 40%;
@@ -150,6 +149,18 @@ blockquote p cite {
 }
 
 /* cards - seccion servicios*/
+#servicios-section {
+    font-family: 'Poppins';
+    background-color: #51f8dc;
+    height: 100vh;
+}
+
+#servicios-section h1 {
+    display: flex;
+    justify-content: center;
+    color: var(--brown);
+}
+
 .cards-section {
     display: flex;
     justify-content: space-evenly;
@@ -166,6 +177,7 @@ blockquote p cite {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: var(--white);
 }
 
 .card img {
@@ -195,6 +207,18 @@ blockquote p cite {
 .card button:hover {
     background-color: var(--green-dark);
     cursor: pointer;
+}
+
+
+/* carrito de compras */
+.btnVaciarCarrito {
+    padding: 0.6rem;
+    width: 10%;
+    border-radius: 20%;
+    background-color: var(--green-dark);
+    color: var(--white);
+    border: none;
+    font-size: 1rem;
 }
 
 

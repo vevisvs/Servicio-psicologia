@@ -1,34 +1,47 @@
-/* Carrito de compra */
+const cart = document.querySelector('cart');
 
-/* capturar servicio elegido del form y agregarlo al carrito de compras */
-let capturarServicioDelForm = () => {
-    let servicioCapturado = new Servicio(agenda.value);
-    console.log(servicioCapturado);
-    agregarServicioAlCarrito();
+/* carrito de compras */
+const carrito = []
+
+/* escuchar evento del boton y agregar servicio al carrito de compras */
+let btnAgregarAlCarrito = document.querySelectorAll('.btnPush-carrito');
+
+const escucharEventoBoton = () => {
+    btnAgregarAlCarrito.forEach((element => {
+    element.addEventListener('click', () => {
+        pushearServicioAlCarrito(element.nombre)
+    })
+}))
+}
+escucharEventoBoton();
+
+
+/* agregar productos al carrito */
+const pushearServicioAlCarrito = (nombreDeServicio) => {
+    let seleccionado = servicios.find((item => {
+        item.nombre === nombreDeServicio
+    }))
+
+    if(seleccionado !== undefined || seleccionado !== null){
+        carrito.push(seleccionado)
+        console.table(carrito)
+    }
 }
 
-let carrito = []
+/* vaciar el carrito */
+const btnVaciarCarrito = document.createElement('button');
+const text = document.createTextNode('Vaciar carrito');
+btnVaciarCarrito.classList.add('btnVaciarCarrito');
+cart.appendChild(btnVaciarCarrito);
+btnVaciarCarrito.appendChild(text);
 
-let agregarServicioAlCarrito = () => {
-    carrito.push(servicioCapturado)
-}
-
-
-
-/* eliminar servicio del carrito */
-
-
-
-
-/* visualizar carrito */
-let pagarReserva = document.querySelector('.pagarReserva');
-
-pagarReserva.addEventListener('click', () => {
-    const visualizarCarrito = () => {
-    console.log(carrito.join(" - "));
-}
-    visualizarCarrito();
+btnVaciarCarrito.addEventListener('click', () => {
+    vaciarElCarrito();
 })
+
+const vaciarElCarrito = () => {
+    carrito.clear();
+}
 
 
 

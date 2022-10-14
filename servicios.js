@@ -24,7 +24,7 @@ function generarServicios() {
 generarServicios();
 
 
-/* eliminar servicio del array */
+/* eliminar servicio de las cards */
 let eliminar = prompt("Ingrese el id del servicio a eliminar")
 if(eliminar > 3){
     alert("Ingrese un id de servicio válido")
@@ -41,9 +41,9 @@ console.log(servicios);
 
 
 /* mostrar card de servicios dinamicamente */
-const mostrarCardsServicios = () => {
-    let cardsServicios = document.querySelector('#servicios-section');
+let cardsServicios = document.querySelector('#servicios-section');
 
+const mostrarCardsServicios = () => {
     let fragmento = document.createElement('div');
     fragmento.classList.add('cards-section');
 
@@ -52,12 +52,17 @@ const mostrarCardsServicios = () => {
                                     <img src="${servicio.imagen}">
                                     <h2>${servicio.nombre}</h2>
                                     <p>${servicio.precio} $</p>
-                                    <button>Añadir a carrito</button>
+                                    <button class="btnPush-carrito">Añadir a carrito</button>
                                 </div>`
     }
     cardsServicios.appendChild(fragmento);
 }
 mostrarCardsServicios();
+
+
+
+
+
 
 
 

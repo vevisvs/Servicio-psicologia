@@ -7,13 +7,10 @@
     <title>Psic. Vevis Villalobos</title>
     <link rel="stylesheet" href="./style.css">
     <!--<script defer src="./miarchivo.js"></script>-->
-    <script defer src="./carrito.js"></script>
-    <script defer src="./servicios.js"></script>
-    <script defer src="./agenda.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/33f0f88cc1.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/33f0f88cc1.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
@@ -31,79 +28,35 @@
                 <li>Servicios</li>
                 <li class="agendarCita">Agendar una cita</li>
                 <li>Contácto</li>
-                <li class="pagarReserva">Pagar mi reserva</li>
+                <li class="pagarReserva">Carrito</li>
             </ul>
         </section>
+
         <section class="container-inicio">
 
-
-        <div id="servicios-section">
-        </div>
-
-
-        <article class="inicio-section">
-            <p class="title">Consultas psicológicas en línea</p>
-            <div class="inicio-section-container">
-                <div class="ventajas">
-                    <img src="./root/psicologa-online.jpg" alt="">
-                </div>
-                <div id="icons">
-                    <div class="icons-div1">
-                        <i class="fa-regular fa-clock"></i>
-                        <p>Esta modalidad permite más flexibilidad horaria.</p>
-                        <i class="fa-solid fa-hourglass-start"></i>
-                        <p>Ahorra tiempo y esfuerzo, evitando el complicado tránsito</p>
+            <article class="inicio-section">
+                <p class="title">Consultas psicológicas en línea</p>
+                <div class="inicio-section-container">
+                    <div class="ventajas">
+                        <img src="./root/psicologa-online.jpg" alt="">
                     </div>
-                    <div class="icons-div2">
-                        <i class="fa-regular fa-face-smile"></i>
-                        <p>Más comodidad para ti. No necesitas salir de tu casa.</p>
-                        <i class="fa-solid fa-desktop"></i>
-                        <p>La terapia en línea tiene la misma eficacia que la terapia presencial</p>
+                    <div id="icons">
+                        <div class="icons-div1">
+                            <i class="fa-regular fa-clock"></i>
+                            <p>Esta modalidad permite más flexibilidad horaria.</p>
+                            <i class="fa-solid fa-hourglass-start"></i>
+                            <p>Ahorra tiempo y esfuerzo, evitando el complicado tránsito</p>
+                        </div>
+                        <div class="icons-div2">
+                            <i class="fa-regular fa-face-smile"></i>
+                            <p>Más comodidad para ti. No necesitas salir de tu casa.</p>
+                            <i class="fa-solid fa-desktop"></i>
+                            <p>La terapia en línea tiene la misma eficacia que la terapia presencial</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </article>
-            
-                <form id="formulario" method="post" >
-                <table>
-                    <tr>
-                    <label for="nombre">Nombre completo</label>
-                    <input type="text" id="nombre" placeholder="Nombre completo">
-                    
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Email" >
-                    
-                    <label for="paisorigen">País de residencia</label>
-                    <select name="paisorigen" id="paisorigen">
-                        <option></option>
-                        <option>Argentina</option>
-                        <option>Brasil</option>
-                        <option>Chile</option>
-                        <option>Colombia</option>
-                        <option>Ecuador</option>
-                        <option>Paraguay</option>
-                        <option>Perú</option>
-                        <option>Uruguay</option>
-                        <option>Venezuela</option>
-                    </select>
-
-                    <label for="agenda">Servicio a agendar</label>
-                    <select name="agenda" id="agenda" onchange="capturarServicioElegido();">
-                        <option></option>
-                        <option>Terapia para adulto</option>
-                        <option>Terapia de pareja</option>
-                        <option>Terapia para adolescente</option>
-                        <option>Terapia infantil</option>
-                    </select>
-                    
-                    <label for="fecha">Fecha de consulta</label>
-                    <input type="date" name="fecha" required>
-                    
-                    <button>Reservar turno</button>
-                    </tr>
-                </table>    
-                </form>
-    
+            </article>
+        </section>
         
     </div>
         <footer class="section-footer">
