@@ -210,6 +210,85 @@ blockquote p cite {
 }
 
 
+/* seccion contacto*/
+.contacto-form {
+    background-color: #51f8dc;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto-form h1 {
+    font-family: 'Poppins';
+    color: var(--brown);
+    margin-bottom: 1rem;
+}
+
+#formulario-contacto .parrafo {
+    margin-bottom: 1.2rem;
+}
+
+#formulario-contacto {
+    width: 30%;
+    height: 90%;
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+input {
+    border-radius: 5px;
+    border-color: #0da98c;
+    height: 1.8rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    float: center;
+}
+
+#paisresidencia {
+    border-radius: 5px;
+    border-color: #0da98c;
+    height: 1.8rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+textarea {
+    border-radius: 5px;
+    border-color: #0da98c;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.div-button {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.form-button {
+    border-radius: 10px;
+    width: 20%;
+    height: 30px;
+    border: none;
+    background-color: var(--green-ligth);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form-button:hover {
+    cursor: pointer;
+    background-color: var(--green-dark);
+}
+
+
 /* carrito de compras */
 .btnVaciarCarrito {
     padding: 0.6rem;
