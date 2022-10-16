@@ -71,6 +71,10 @@ blockquote p cite {
 
 /* nav-bar */
 
+.menu-section {
+    font-family: 'Poppins';
+}
+
 .menu-section .list {
     display: flex;
     justify-content: space-evenly;
@@ -263,6 +267,7 @@ textarea {
     border-color: #0da98c;
     width: 100%;
     margin-bottom: 1rem;
+    resize: none;
 }
 
 .div-button {
@@ -290,6 +295,12 @@ textarea {
 
 
 /* carrito de compras */
+.cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .btnVaciarCarrito {
     padding: 0.6rem;
     width: 10%;
