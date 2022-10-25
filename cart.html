@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/33f0f88cc1.js" crossorigin="anonymous"></script>
-    <script defer src="./servicios.js"></script>
-    <script defer src="./carrito.js"></script>
+    <!-- <script defer src="./servicios.js"></script> -->
+    
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -23,10 +23,29 @@
             <li><a href="./cart.html">Carrito</a></li>
         </ul>
     </section>
-    <div class="cart">
-        
+    <div class="row" id="items-container">
+        <div id="items-template">
+            <div class="carta">
+                <h5 class="card-title">Titulo</h5>
+                <p class="card-text">$<span>1500</span></p>
+                <button class="btn-comprar">Comprar</button>
+            </div>
+        </div>
     </div>
-    <button class="btnVaciarCarrito">Vaciar carrito</button>
 
+    <table class="container-carrito">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Nombre</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+    </table>
+
+
+    <button class="btnVaciarCarrito">Vaciar carrito</button>
+    <script  type="module" src="./carritoCompra.js"></script>
 </body>
 </html>

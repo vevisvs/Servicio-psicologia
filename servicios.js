@@ -24,22 +24,6 @@ function generarServicios() {
 generarServicios();
 
 
-/* eliminar servicio de las cards */
-let eliminar = prompt("Ingrese el id del servicio a eliminar")
-if(eliminar > 3){
-    alert("Ingrese un id de servicio válido")
-} else {
-    servicios.forEach((item, index, servicios) => {
-        if(item.id == eliminar){ 
-            servicios.splice(index, 1 )
-        }      
-    } 
-)
-}
-console.log(servicios);
-
-
-
 /* mostrar card de servicios dinamicamente */
 let cardsServicios = document.querySelector('#servicios-section');
 
@@ -52,7 +36,6 @@ const mostrarCardsServicios = () => {
                                     <img src="${servicio.imagen}">
                                     <h2>${servicio.nombre}</h2>
                                     <p>${servicio.precio} $</p>
-                                    <button class="btnPush-carrito">Añadir a carrito</button>
                                 </div>`
     }
     cardsServicios.appendChild(fragmento);

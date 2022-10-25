@@ -42,5 +42,9 @@ function validarFormulario(e) {
 }
 
 
-
+formButton.onclick = () => {
+    localStorage.setItem('Nombre', nombre);
+    localStorage.setItem('Email', email);
+    localStorage.setItem('Pais', pais);
+}
 
