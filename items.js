@@ -1,26 +1,26 @@
-[
+const datos = [
         {
             "id": 0,
             "imagenUrl": "./img/terapia-adultos.jpg",
-            "Nombre": "Terapia para adultos",
+            "nombre": "Terapia para adultos",
             "precio": 1500
         },
         {
             "id": 1,
             "imagenUrl": "./img/terapia-parejas.jpg",
-            "Nombre": "Terapia de parejas",
+            "nombre": "Terapia de parejas",
             "precio": 2500
         },
         {
             "id": 2,
             "imagenUrl": "./img/terapia-adolescentes.jpg",
-            "Nombre": "Terapia para adolescentes",
+            "nombre": "Terapia para adolescentes",
             "precio": 1800
         },
         {
             "id": 3,
             "imagenUrl": "./img/terapia-ninos.jpg",
-            "Nombre": "Terapia para niños",
+            "nombre": "Terapia para niños",
             "precio": 2000
         }
 ]
