@@ -24,7 +24,7 @@ function pintarItemsEnContenedor (datos) {
 //envío los item seleccionados al carrito:
 const agregarItemAlCarrito = () => {
     
-    const btnComprar = document.querySelectorAll('btn-comprar');
+    const btnComprar = document.querySelectorAll('.btn-comprar');
     btnComprar.forEach((boton) => {
         boton.addEventListener('click', (e) => {
             e.preventDefault();
