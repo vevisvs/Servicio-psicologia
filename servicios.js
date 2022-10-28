@@ -1,93 +1,61 @@
-
-/* creacion de la clase Servicio con su constructor */
-// class Servicio {
-//     constructor(id, imagen, nombre, precio){
-//         this.id = id;
-//         this.imagen = imagen;
-//         this.nombre = nombre;
-//         this.precio = precio;
-//     }
-// }
-
-// /*crear array de servicios */
-// const servicios = []
-
-
-// /* crear los objetos servicios y cargarlos al array */
-// function generarServicios() {
-//     let terapiaAdultos = new Servicio (0, 'root/img/terapia-adultos.jpg','Terapia para adultos', 1500);
-//     let terapiaParejas = new Servicio (1, 'root/img/terapia-parejas.jpg', 'Terapia de parejas', 2500);
-//     let terapiaAdolescentes = new Servicio (2, 'root/img/terapia-adolescentes.jpg', 'Terapia para adolescentes', 1800);
-//     let terapiaNinos = new Servicio (3, 'root/img/terapia-ninos.png', 'Terapia para niños', 2000);
-    
-//     servicios.push(terapiaAdultos, terapiaParejas, terapiaAdolescentes, terapiaNinos);
-// }
-// generarServicios();
-
-
-/* mostrar card de servicios dinamicamente */
-
-// let cardsServicios = document.querySelector('#servicios-section');
-
-// const mostrarCardsServicios = () => {
-//     let fragmento = document.createElement('div');
-//     fragmento.classList.add('cards-section');
-
-//     {
-//         fragmento.innerHTML += `<div class="card">
-//                                     <img src="${servicio.imagen}">
-//                                     <h2>${servicio.nombre}</h2>
-//                                     <p>${servicio.precio} $</p>
-//                                 </div>`
-//     }
-//     cardsServicios.appendChild(fragmento);
-// }
-// mostrarCardsServicios();
-
-
-
-// module.export = {Servicio};
-
+//de esta forma, cuando se cargue el DOM, se renderizan las funciones:
 document.addEventListener('DOMContentLoaded', () => {
     pintarItemsEnContenedor(datos);
+    agregarItemAlCarrito();
 })
 
-const containerItems = document.querySelector('.items-container');
+// Selectores del DOM:
+const containerItems = document.querySelector('.containerItems');
 const templateServicios = document.getElementById('servicios-section');
 
 //accedo a la info del json para imprimir cada item:
-let template = '';
 function pintarItemsEnContenedor (datos) {
-    
     // template.classList.add('templateItem');
-console.log(template)
     datos.forEach(item => {
-        template += `<div class="carta">
-                                    <h5 class="card-title">${item.nombre}</h5>
-                                    <p class="card-text">$<span>${item.precio}</span></p>
-                                    <button class="btn-comprar" id=${item.id}>Añadir al carrito</button>
-                                </div>`
+        containerItems.innerHTML+= `<div class="card">
+                                        <h5 class="card-title">${item.nombre}</h5>
+                                        <p class="card-text">$<span>${item.precio}</span></p>
+                                        <input type="button" class="btn-comprar" value=${item.id}>Añadir al carrito</input>
+                                    </div>`
     });
-    
 }
-containerItems.appendChild(template);
-
-// const btnComprar = document.querySelectorAll('.btn-comprar');
-// console.log(btnComprar)
-
-// const agregarItemAlCarrito = () => {
-//     btnComprar.addEventListener('click', () => {
-//         btnComprar.forEach(elemento => {
-
-//         })
-//         idSeleccionado
-//         if(idSeleccionado == item.id){
-
-//         }
-//     })
-// }
-
-// localStorage.setItem('servicioElegido', JSON.stringify())
 
 
-// switch , boton btnComprar ,  tiene atributo, mandar al local storage
+//envío los item seleccionados al carrito:
+const agregarItemAlCarrito = () => {
+    
+    const btnComprar = document.querySelectorAll('btn-comprar');
+    btnComprar.forEach((boton) => {
+        boton.addEventListener('click', (e) => {
+            e.preventDefault();
+            //id del boton presionado:
+            const botonID = e.target.id;
+            //encontrar servicio relacionado a ese botonId y guardarlo en variable:
+            const servicioSeleccionado = datos.find(item => item.id == botonID);
+            carrito.push(servicioSeleccionado)
+        }
+    )}
+)}
+
+
+
+
+        //     if(boton.target === "0"){
+        //         console.log("Este es el boton 0")
+        //     }
+        //     if(boton.target === "1"){
+        //         console.log("Este es el boton 0")
+        //     } 
+        //     if(boton.target === "2"){
+        //         console.log("Este es el boton 0")
+        //     } 
+        //     if(boton.target === "3"){
+        //         console.log("Este es el boton 0")
+        //     }
+        //     console.log("No se clickeo ningun boton")
+        // });
+        // console.log(typeof(boton.value))
+        
+
+
+
