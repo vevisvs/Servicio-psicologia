@@ -23,7 +23,7 @@
             <li><a href="./cart.html">Carrito</a></li>
         </ul>
     </section>
-    <div class="row" id="items-container">
+    <!-- <div class="row" id="items-container">
         <div id="items-template">
             <div class="carta">
                 <h5 class="card-title">Titulo</h5>
@@ -31,21 +31,28 @@
                 <button class="btn-comprar">Comprar</button>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <table class="container-carrito">
-        <thead>
-            <tr>
+    <div id="container-carrito">
+            <!-- <tr class="row">
                 <th>id</th>
                 <th>Nombre</th>
                 <th class="cantidad">Cantidad</th>
                 <th>Precio</th>
             </tr>
-        </thead>
-    </table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr> -->
+    </div>
 
 
-    <button class="btnVaciarCarrito">Vaciar carrito</button>
-    <script  type="module" src="./carritoCompra.js"></script>
+    <button id="btn-vaciar" class="btnVaciarCarrito">Vaciar carrito</button>
+
+    <script src="items.js"></script>
+    <script src="./carritoCompra.js"></script>
+    <script src="./servicios.js"></script>
 </body>
 </html>

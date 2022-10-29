@@ -23,7 +23,7 @@ function pintarItemsEnContenedor (datos) {
 }
 
 
-//envío los item seleccionados al carrito:
+//envío los items seleccionados al carrito:
 const agregarItemAlCarrito = () => {
     
     const btnComprar = document.querySelectorAll('.btn-comprar');
@@ -35,10 +35,11 @@ const agregarItemAlCarrito = () => {
             //encontrar servicio relacionado a ese botonId y guardarlo en variable:
             const servicioSeleccionado = datos.find(item => item.id == botonID);
             carrito.push(servicioSeleccionado)
-            console.log(carrito)
+            renderizarCarrito();
         }
     )}
 )}
+
 
 
 
