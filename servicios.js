@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     pintarItemsEnContenedor(datos);
     agregarItemAlCarrito();
+
 })
 
 
@@ -12,7 +13,6 @@ const templateServicios = document.getElementById('servicios-section');
 
 //accedo a la info del json para imprimir cada item:
 function pintarItemsEnContenedor (datos) {
-    // template.classList.add('templateItem');
     datos.forEach(item => {
         containerItems.innerHTML+= `<div class="card">
                                         <h5 class="card-title">${item.nombre}</h5>
@@ -25,8 +25,9 @@ function pintarItemsEnContenedor (datos) {
 
 //envío los items seleccionados al carrito:
 const agregarItemAlCarrito = () => {
-    
+
     const btnComprar = document.querySelectorAll('.btn-comprar');
+
     btnComprar.forEach((boton) => {
         boton.addEventListener('click', (e) => {
             e.preventDefault();
@@ -34,10 +35,10 @@ const agregarItemAlCarrito = () => {
             const botonID = e.target.id;
             //encontrar servicio relacionado a ese botonId y guardarlo en variable:
             const servicioSeleccionado = datos.find(item => item.id == botonID);
-            carrito.push(servicioSeleccionado)
+            carrito.push(servicioSeleccionado);
             renderizarCarrito();
         }
-    )}
+    )},
 )}
 
 
