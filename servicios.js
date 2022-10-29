@@ -4,9 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     agregarItemAlCarrito();
 })
 
+
 // Selectores del DOM:
 const containerItems = document.querySelector('.containerItems');
 const templateServicios = document.getElementById('servicios-section');
+
 
 //accedo a la info del json para imprimir cada item:
 function pintarItemsEnContenedor (datos) {
@@ -15,7 +17,7 @@ function pintarItemsEnContenedor (datos) {
         containerItems.innerHTML+= `<div class="card">
                                         <h5 class="card-title">${item.nombre}</h5>
                                         <p class="card-text">$<span>${item.precio}</span></p>
-                                        <input type="button" class="btn-comprar" value=${item.id}>Añadir al carrito</input>
+                                        <button id=${item.id} type="button" class="btn-comprar">Añadir al carrito</button>
                                     </div>`
     });
 }
@@ -33,29 +35,10 @@ const agregarItemAlCarrito = () => {
             //encontrar servicio relacionado a ese botonId y guardarlo en variable:
             const servicioSeleccionado = datos.find(item => item.id == botonID);
             carrito.push(servicioSeleccionado)
+            console.log(carrito)
         }
     )}
 )}
-
-
-
-
-        //     if(boton.target === "0"){
-        //         console.log("Este es el boton 0")
-        //     }
-        //     if(boton.target === "1"){
-        //         console.log("Este es el boton 0")
-        //     } 
-        //     if(boton.target === "2"){
-        //         console.log("Este es el boton 0")
-        //     } 
-        //     if(boton.target === "3"){
-        //         console.log("Este es el boton 0")
-        //     }
-        //     console.log("No se clickeo ningun boton")
-        // });
-        // console.log(typeof(boton.value))
-        
 
 
 

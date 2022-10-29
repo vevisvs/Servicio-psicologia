@@ -1,13 +1,13 @@
 const carrito = []
 
-//seleccionar la clase que aumenta la cantidad del item:
-let cantidad = document.querySelector('.cantidad')
-
-const sumarCantidadEnCarrito = () => {
-    let total = cantidad += 1
-    return total;
+//funcion para agregar carrito al LocalStorage:
+const guardarCarritoEnStorage = () => {
+    localStorage.setItem('carrito', JSON.stringify(carrito));
 }
-sumarCantidadEnCarrito();
 
 
+//funcion para obtener datos del localStorage:
+const buscarCarritoEnStorage = () => {
+    return localStorage.getItem('carrito')
+}
 
