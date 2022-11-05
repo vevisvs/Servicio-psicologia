@@ -9,7 +9,7 @@ const guardarCarritoEnStorage = () => {
 
 //funcion para obtener datos del localStorage:
 const buscarCarritoEnStorage = () => {
-    return localStorage.getItem('carrito')
+    return localStorage.getItem('carrito', JSON.parse(carrito))
 }
 
 
@@ -21,7 +21,6 @@ const btnVaciarCarrito = document.getElementById('btn-vaciar');
 
 //renderizar carrito, luego de pushear los items en el:
 const renderizarCarrito = ()=> {
-    // contenedorCarrito.innerHTML = ""; //inicia el nodo en blanco (borra todo) cada vez q se ejecute la función
 
     for(item in carrito) {
         let divProducto = document.createElement('div');
