@@ -1,4 +1,4 @@
-//carrito de compras, que se va a cargar con la info enviada de servicios.js:
+/*//carrito de compras, que se va a cargar con la info enviada de servicios.js:
 let carrito = []
 
 //funcion para agregar carrito al LocalStorage:
@@ -9,7 +9,7 @@ const guardarCarritoEnStorage = () => {
 
 //funcion para obtener datos del localStorage:
 const buscarCarritoEnStorage = () => {
-    return localStorage.getItem('carrito', JSON.parse(carrito))
+    return localStorage.getItem('carrito')
 }
 
 
@@ -21,8 +21,9 @@ const btnVaciarCarrito = document.getElementById('btn-vaciar');
 
 //renderizar carrito, luego de pushear los items en el:
 const renderizarCarrito = ()=> {
-
-    for(item in carrito) {
+    buscarCarritoEnStorage();
+    if(containerItems){
+        for(item in carrito) {
         let divProducto = document.createElement('div');
         // divProducto.classList.add('divProducto')
         divProducto.innerHTML += `<p>Nombre: ${item.nombre}</p>
@@ -31,6 +32,9 @@ const renderizarCarrito = ()=> {
 
         contenedorCarrito.appendChild(divProducto);
         guardarCarritoEnStorage();
+        }
+    } else {
+        console.log("carrito no encontrado")
     }
 }
 
@@ -47,3 +51,4 @@ const eliminarItemDelCarrito = () => {
     })
 }
 
+*/

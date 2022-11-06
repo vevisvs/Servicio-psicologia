@@ -1,0 +1,31 @@
+[
+	{
+		"precio": 1500,
+		"id": 1,
+		"title": "Terapia para adultos",
+		"imagenUrl": "img/terapia-adultos.jpg"
+	},
+
+	{
+		"precio": 2000,
+		"id": 2,
+		"title": "Terapia para parejas",
+		"imagenUrl": "img/terapia-parejas.jpg"
+	},
+
+	{
+		"precio": 2500,
+		"id": 3,
+		"title": "Terapia para adolescentes",
+		"imagenUrl": "img/terapia-adolescentes.jpg"
+	},
+
+	{
+		"precio": 1800,
+		"id": 4,
+		"title": "Terapia para niños",
+		"imagenUrl": "img/terapia-ninos.png"
+	}
+]
+
+

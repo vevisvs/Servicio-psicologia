@@ -1,5 +1,5 @@
 /*estilos generales */
-* {
+/* * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -21,21 +21,21 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: 'Poppins';
-}
+} */
 
  /* pattern */
 
-.pattern {
+/* .pattern {
 max-height: 70%;
 max-width: 100%;
 position: absolute; top: -145px; bottom: 250px;
 opacity: 0.3;
 transform: rotate(110deg);
 
-}
+} */
 
 /* encabezado - logo*/
-
+/* 
 .logo {
     display: flex;
     justify-content: center;
@@ -66,12 +66,12 @@ blockquote p cite {
     display: block;
     margin-top: 0.4rem;
     text-align: center;
-}
+} */
 
 
 /* nav-bar */
 
-.menu-section {
+/* .menu-section {
     font-family: 'Poppins';
 }
 
@@ -87,12 +87,12 @@ blockquote p cite {
 .menu-section .list li:hover {
     font-weight: 700;
     cursor: pointer;
-}
+} */
 
 
 /* body - seccion inicio*/
 
-.inicio-section {
+/* .inicio-section {
     justify-content: space-between;
     margin-top: 2rem;
 }
@@ -124,10 +124,10 @@ blockquote p cite {
     font-size: 1.3rem;
     list-style: none;
     align-items: center;
-}
+} */
 
 /* icons - listas*/
-#icons {
+/* #icons {
     font-size: 40px;
     width: 40%;
     display: flex;
@@ -150,19 +150,24 @@ blockquote p cite {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+} */
 
 /* cards - seccion servicios*/
-#servicios-section {
+/* .container-carrito {
     font-family: 'Poppins';
     background-color: #51f8dc;
     height: 100vh;
+
 }
 
 #servicios-section h1 {
     display: flex;
     justify-content: center;
     color: var(--brown);
+} */
+
+/* #templates-card {
+    display: flex;
 }
 
 .cards-section {
@@ -170,9 +175,9 @@ blockquote p cite {
     justify-content: space-evenly;
     height: 60vh;
     margin-top: 2rem;
-}
+} */
 
-.card {
+/* .card {
     width: 20%;
     border: 0.3px gray solid;
     box-shadow: 5px 5px 2px 2px rgba(0,0,0,0.3);
@@ -211,11 +216,11 @@ blockquote p cite {
 .card button:hover {
     background-color: var(--green-dark);
     cursor: pointer;
-}
+} */
 
 
 /* seccion contacto*/
-.contacto-form {
+/* .contacto-form {
     background-color: #51f8dc;
     height: 100vh;
     display: flex;
@@ -291,10 +296,10 @@ textarea {
 .form-button:hover {
     cursor: pointer;
     background-color: var(--green-dark);
-}
+} */
 
 
-/* carrito de compras */
+/* carrito de compras
 .cart {
     display: flex;
     justify-content: center;
@@ -309,11 +314,11 @@ textarea {
     color: var(--white);
     border: none;
     font-size: 1rem;
-}
+} */
 
 
 /* footer - seccion inicio */
-.section-footer {
+/* .section-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -355,4 +360,4 @@ textarea {
 .final-footer #logo {
     width: 20%;
 }
-
+ */
