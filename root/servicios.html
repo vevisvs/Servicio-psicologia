@@ -29,7 +29,8 @@
 
 <body class="container-carrito">
 	<div class="container">
-		<h1 style="color:rgb(96, 168, 165)">Carrito de compra</h1>
+		<h1 class=" text-center bg-success text-white h1">Carrito de compra</h1>
+    <h5 class="text-center" style="color:rgb(96, 168, 165)">En esta sección podrás encontrar los servicios a disposición</h5>
 		<hr>
 		<table class="table">
 			<thead>
@@ -54,7 +55,7 @@
         <th scope="row" colspan="2">Total</th>
         <td>10</td>
         <td>
-            <button class="btn btn-danger btn-sm" id="vaciar-carrito">Vaciar carrito</button>
+            <button class="btn btn-danger" id="vaciar-carrito">Vaciar carrito</button>
         </td>
         <td class="font-weight-bold">$ <span>5000</span></td>
     </template>
@@ -78,19 +79,19 @@
 
 
 	<template id="template-card">
-		<div class="col-12 mb-2 col-md-4">
+		<div class="col-8 mb-2 col-md-3">
 		  <div class="card">
 			  <img src="" alt="" class="card-img-top">
 			<div class="card-body">
 			  <h5>Titulo</h5>
 			  <p>precio</p>
-			  <button class="btn btn-dark">Añadir al carrito</button>
+			  <button class="btn btn-dark btn-sm">Añadir al carrito</button>
 			</div>
 		  </div>
 		</div>
 	</template>
 
     <script src="servicios.js"></script>
-    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

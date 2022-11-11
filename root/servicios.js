@@ -49,8 +49,6 @@ const pintarCard = data=>{
 }
 
 const addCarrito = e =>{
-	//console.log(e.target)
-	//console.log(e.target.classList.contains('btn-dark'))
 	if(e.target.classList.contains('btn-dark')){
 		setCarrito(e.target.parentElement)
 	}
@@ -61,7 +59,6 @@ e.stopPropagation()
 
 
 const setCarrito = item => {
-	//console.log(objeto)
 	const producto = {
 		title: item.querySelector('h5').textContent,
 		precio: item.querySelector('p').textContent,
@@ -114,10 +111,26 @@ const pintarFooter = () => {
 	
 		const btnVaciar = document.getElementById('vaciar-carrito')
 		btnVaciar.addEventListener('click', ()=>{
-			carrito = {}
-			pintarCarrito()
-		})
-	}
+				Swal.fire({
+					title: '¿Está seguro de eliminar los elementos cargados en el carrito?',
+					icon: 'warning',
+					showCancelButton: true,
+					confirmButtonText: 'Si, seguro',
+					cancelButtonText: 'No, no quiero'
+				}).then((result) => {
+					if(result.isConfirmed){
+						Swal.fire({
+							title: 'Borrado!',
+							icon: 'success',
+							text: 'El carrito ha sido borrado'
+							
+						})
+					}
+					carrito = {}
+					pintarCarrito()
+				})
+			})
+		}
 
 
 const btnAccion = e =>{
